@@ -33,6 +33,11 @@ public class LineCacheReader {
         this.load();
     }
 
+    public boolean contains(String item)
+    {
+        return this.lineSet.contains(item);
+    }
+
     public boolean load()
     {
         boolean result = false;

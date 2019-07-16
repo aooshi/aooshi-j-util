@@ -43,6 +43,11 @@ public class MapCacheReader {
         this.load();
     }
 
+    public String get(String key)
+    {
+        return  this.lineMap.get(key);
+    }
+
     public boolean load()
     {
         boolean result = false;
