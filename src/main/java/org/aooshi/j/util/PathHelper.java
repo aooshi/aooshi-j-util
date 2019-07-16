@@ -10,6 +10,7 @@ public class PathHelper {
      * 生成一个二级路径信息,常用于文件存储
      *
      * @return
+     *      path1 / path2 / filename
      */
     public static String createSecondPath() {
         String uuid = UUID.randomUUID().toString().replaceAll("-", "");
@@ -25,6 +26,36 @@ public class PathHelper {
         String path = path1 + '/' + path2 + '/' + uuid + timemd5.substring(0, 8);
 
         return path;
+    }
+
+    /**
+     * 生成一个二级路径信息,常用于文件存储
+     *
+     * @param suffix
+     * @return
+     *      new String[] { path, name, suffix }
+     */
+    public static String[] createSecondPath(String suffix) {
+        String uuid = UUID.randomUUID().toString().replaceAll("-", "");
+
+        Long time = System.currentTimeMillis();
+        String timeString = time.toString();
+
+        String timemd5 = DigestUtils.md5Hex(timeString);
+
+        String path1 = timemd5.substring(10, 12);
+        String path2 = timemd5.substring(20, 22);
+
+        //String path = path1 + '/' + path2 + '/' + uuid + timemd5.substring(0, 8);
+        String path = path1 + '/' + path2;
+        String name = uuid + timemd5.substring(0, 8);
+
+        //
+        return new String[]{
+                path,
+                name,
+                suffix
+        };
     }
 
     /**
