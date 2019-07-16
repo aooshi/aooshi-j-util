@@ -83,7 +83,7 @@ public class PathHelper {
      * @param filename
      * @return
      */
-    public static String getFilePath(String filename) {
+    public static String getFileSecondPath(String filename) {
         String fileExtension = getExtension(filename);
         return getSecondPath(fileExtension);
     }
@@ -139,10 +139,26 @@ public class PathHelper {
             return "";
 
         return filepath.substring(index + 1);
-
-        //String[] suffix = filepath.split("/");
-        //int len=suffix.length;
-        //return suffix[len-1];
     }
+
+    /**
+     * 获取一个路径中的路径部份
+     *
+     * @param filepath 文件路径
+     * @return
+     */
+    public static String getDirectoryByPath(String filepath) {
+        int index = filepath.lastIndexOf("/");
+        if (index == -1)
+            return null;
+
+        //last char
+        if (index == filepath.length() - 1)
+            return filepath;
+
+        return filepath.substring(0,index + 1);
+    }
+
+
 
 }
