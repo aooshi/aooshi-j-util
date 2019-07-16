@@ -99,6 +99,10 @@ public class PathHelper {
         if (index == -1)
             return "";
 
+        //last char
+        if (index == filename.length() - 1)
+            return "";
+
         String suffix = filename.substring(index);
         return suffix;
     }
@@ -130,9 +134,15 @@ public class PathHelper {
         if (index == -1)
             return null;
 
-        String[] suffix = filepath.split("/");
-        int len=suffix.length;
-        return suffix[len-1];
+        //last char
+        if (index == filepath.length() - 1)
+            return "";
+
+        return filepath.substring(index + 1);
+
+        //String[] suffix = filepath.split("/");
+        //int len=suffix.length;
+        //return suffix[len-1];
     }
 
 }
