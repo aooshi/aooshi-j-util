@@ -135,8 +135,8 @@ public class BaseDataConverter {
 
 	/**
 	 * 转换为无符号字节值
-	 * @param data
-	 * @return
+	 * @param data 数据
+	 * @return 结果
 	 */
 	public static int getUnsignedByte(byte data) {
 		// 将data字节型数据转换为0~255 (0xFF 即BYTE)。
@@ -145,8 +145,8 @@ public class BaseDataConverter {
 
 	/**
 	 * 转换为无符号短整型值
-	 * @param data
-	 * @return
+	 * @param data 数据
+	 * @return 结果
 	 */
 	public static int getUnsignedShort(short data) {
 		// 将data字节型数据转换为0~65535 (0xFFFF 即 WORD)。
@@ -155,8 +155,8 @@ public class BaseDataConverter {
 
 	/**
 	 * 转换为无符号整型值
-	 * @param data
-	 * @return
+	 * @param data 数据
+	 * @return 结果
 	 */
 	public static long getUnsignedInt(int data) {
 		// 将int数据转换为0~4294967295 (0xFFFFFFFF即DWORD)。
@@ -165,8 +165,9 @@ public class BaseDataConverter {
 
 	/**
 	 * 转换为无符号长整型值
-	 * @param v
+	 * @param v 值
 	 * @return
+	 *  结果
 	 */
 	public static java.math.BigInteger getUnsignedInt64(long v) {
 		// 将int数据转换为0~4294967295 (0xFFFFFFFF即DWORD)。

@@ -11,6 +11,7 @@ public class MD5Utils {
      * @param origin      字符
      * @param charsetname 编码
      * @return
+     *  结果
      */
     public static String MD5Encode(String origin, String charsetname) {
         String resultString = null;

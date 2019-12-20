@@ -32,6 +32,7 @@ public class PathHelper {
      * 生成一个二级路径信息,常用于文件存储
      *
      * @param suffix
+     *  后缀
      * @return
      *      new String[] { path, name, suffix }
      */
@@ -62,7 +63,9 @@ public class PathHelper {
      * 获取一个二级路径文件路径，输入值为null时将发生异常
      *
      * @param fileExtension
+     *  后缀
      * @return
+     *  获取到的结果
      */
     public static String getSecondPath(String fileExtension) {
         if (StringHelper.isEmpty(fileExtension)) {
@@ -81,7 +84,9 @@ public class PathHelper {
      * 获取文件路径，输入值为null时将发生异常
      *
      * @param filename
+     *  文件名
      * @return
+     *  处理结果
      */
     public static String getFileSecondPath(String filename) {
         String fileExtension = getExtension(filename);
@@ -92,7 +97,9 @@ public class PathHelper {
      * 获取一个文件的后缀名
      *
      * @param filename
+     *  文件名
      * @return
+     *  获取到的结果
      */
     public static String getExtension(String filename) {
         int index = filename.lastIndexOf(".");
@@ -111,8 +118,9 @@ public class PathHelper {
     /**
      * 获取一个不含后缀的文件名
      *
-     * @param filename
+     * @param filename 文件名
      * @return
+     *  获取到的结果
      */
     public static String getFileName(String filename) {
         int index = filename.lastIndexOf(".");
@@ -128,6 +136,7 @@ public class PathHelper {
      *
      * @param filepath 文件路径
      * @return
+     *  获取到的结果
      */
     public static String getFileNameByPath(String filepath) {
         int index = filepath.lastIndexOf("/");
@@ -146,6 +155,7 @@ public class PathHelper {
      *
      * @param filepath 文件路径
      * @return
+     *  输出
      */
     public static String getDirectoryByPath(String filepath) {
         int index = filepath.lastIndexOf("/");

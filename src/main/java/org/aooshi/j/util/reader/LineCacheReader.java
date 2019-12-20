@@ -11,7 +11,7 @@ public class LineCacheReader {
 
     /**
      * get file path
-     * @return
+     * @return result
      */
     public String getFilePath() {
         return filePath;
@@ -19,7 +19,7 @@ public class LineCacheReader {
 
     /**
      * get line set
-     * @return
+     * @return result
      */
     public Set<String> getSet() {
         return this.lineSet;

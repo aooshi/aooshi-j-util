@@ -13,7 +13,7 @@ public class MapCacheReader {
 
     /**
      * get file path
-     * @return
+     * @return result
      */
     public String getFilePath() {
         return filePath;
@@ -21,7 +21,7 @@ public class MapCacheReader {
 
     /**
      * get separator
-     * @return
+     * @return result
      */
     public String getSeparator() {
         return separator;
@@ -29,7 +29,7 @@ public class MapCacheReader {
 
     /**
      * get map
-     * @return
+     * @return result
      */
     public Map<String,String> getMap() {
         return this.lineMap;

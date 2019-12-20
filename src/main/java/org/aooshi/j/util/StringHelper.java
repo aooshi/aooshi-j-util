@@ -9,7 +9,9 @@ public class StringHelper {
 	/**
 	 * 验证是否为空字符串  null / empty
 	 * @param input
+	 * 	输入
 	 * @return
+	 * 	是否为空
 	 */
 	public static boolean isEmpty(String input)
 	{
@@ -25,7 +27,9 @@ public class StringHelper {
 	/**
 	 * 验证是否为空字符串或空格 null / empty / space
 	 * @param input
+	 * 	输入
 	 * @return
+	 *  结果
 	 */
 	public static boolean isEmptyOrSpace(String input)
 	{
@@ -37,8 +41,9 @@ public class StringHelper {
 
 	/**
 	 * 验证字符串是否为全数字
-	 * @param str
+	 * @param str 输入
 	 * @return
+	 *  结果
 	 */
     public static boolean isNumeric(String str){
     	if (str == null) return false;
@@ -52,8 +57,9 @@ public class StringHelper {
 
 	/**
 	 * 验证字符串是否为数字与字母
-	 * @param str
+	 * @param str 输入
 	 * @return
+	 *  结果
 	 */
     public static boolean isLetterOrDigit(String str){
     	if (str == null) 
@@ -72,14 +78,25 @@ public class StringHelper {
 	
     /**
      * 以UTF8字符集将字符串转为字节数组,转换失败返回 null
+	 * @return
+	 * 结果
+	 *
+	 * @param data 数据
      */
     public static byte[] getBytes(String data){
         return getBytes(data, "UTF-8");
     }
         
     /**
-     * 字符串转为字节数组,转换失败返回 null
-     * @see 如果系统不支持所传入的<code>charset</code>字符集,则按照系统默认字符集进行转换
+     * 字符串转为字节数组,转换失败返回
+	 * @param charset
+	 * 	字符集
+	 *
+	 * @param data
+	 *  数据
+	 *
+	 * @return
+	 *  结果
      */
     public static byte[] getBytes(String data, String charset){
     	if (data == null)

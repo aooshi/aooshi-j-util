@@ -9,7 +9,7 @@ public class Base64Helper
 
 	/**
 	 * encode
-	 * @param data
+	 * @param data　数据
 	 * @return
 	 *     failure return null.
 	 */
@@ -24,7 +24,7 @@ public class Base64Helper
 	
 	/**
 	 * encode
-	 * @param input
+	 * @param input　输入
 	 * @return
 	 *     failure return null.
 	 */
@@ -39,9 +39,10 @@ public class Base64Helper
 	
 	/**
 	 * encode
-	 * @param input
+	 * @param input　输入
 	 * @return
 	 *     failure return null.
+	 * @param encoding 编码
 	 */
 	public static String Encode(String input, String encoding)
 	{
@@ -64,7 +65,7 @@ public class Base64Helper
 
 	/**
 	 * encode as utf8
-	 * @param data
+	 * @param data　数据
 	 * @return
 	 *     failure return null.
 	 */
@@ -76,8 +77,8 @@ public class Base64Helper
 
 	/**
 	 * encode as string
-	 * @param data
-	 * @param encoding
+	 * @param data　数据
+	 * @param encoding　编码
 	 * @return
 	 * 	failure return null.
 	 */
@@ -101,7 +102,7 @@ public class Base64Helper
 
 	/**
 	 * decode
-	 * @param base64String
+	 * @param base64String　字符串
 	 * @return
 	 *     failure return null.
 	 */
@@ -116,9 +117,9 @@ public class Base64Helper
 	
 	/**
 	 * decode
-	 * @param base64Bytes
+	 * @param base64Bytes　字节数据
 	 * @return
-	 *     failure return null.
+	 * 　failure return null.
 	 */
 	public static byte[] Decode(byte[] base64Bytes)
 	{
@@ -131,9 +132,8 @@ public class Base64Helper
 
 	/**
 	 * decode as bytes
-	 * @param encoding
-	 * @return
-	 *     failure return null.
+	 * @param base64String 字符串
+	 * @return failure return null.
 	 */
 	public static byte[] DecodeAsBytes(String base64String)
 	{
@@ -146,9 +146,8 @@ public class Base64Helper
 
 	/**
 	 * decode as string by UTF-8
-	 * @param base64String
-	 * @return
-	 *     failure return null.
+	 * @param base64String 字符串
+	 * @return failure return null.
 	 */
 	public static String DecodeAsString(String base64String)
 	{
@@ -158,10 +157,9 @@ public class Base64Helper
 
 	/**
 	 * decode as string
-	 * @param base64String
-	 * @param encoding
-	 * @return
-	 *     failure return null.
+	 * @param base64String 字符串
+	 * @param encoding 编码
+	 * @return failure return null.
 	 */
 	public static String DecodeAsString(String base64String, String encoding)
 	{
@@ -186,9 +184,8 @@ public class Base64Helper
 
 	/**
 	 * 使用utf-8编码可用的URL字符串
-	 * @param urlString
-	 * @return
-	 *     failure return null.
+	 * @param urlString 字符串
+	 * @return    failure return null.
 	 */
 	public static String EncodeUrl(String urlString)
 	{		
@@ -197,10 +194,9 @@ public class Base64Helper
 
 	/**
 	 * 使用Base64编码可用的URL字符串
-	 * @param urlString
-	 * @param encoding
-	 * @return
-	 *     failure return null.
+	 * @param urlString 字符串
+	 * @param encoding 编码
+	 * @return  failure return null.
 	 */
 	public static String EncodeUrl(String urlString, String encoding)
 	{
@@ -224,8 +220,8 @@ public class Base64Helper
 	
 	/**
 	 * 使用UTF-8编码将UrlBase64编码串转换为源字符串
-	 * @param base64UrlString
-	 * @return
+	 * @param base64UrlString 字符串
+	 * @return 结果
 	 */
 	public static String DecodeUrl(String base64UrlString)
 	{
@@ -234,9 +230,9 @@ public class Base64Helper
 
 	/**
 	 * 将UrlBase64编码串转换为源字符串
-	 * @param base64UrlString
-	 * @param encoding
-	 * @return
+	 * @param base64UrlString 字符串
+	 * @param encoding 编码
+	 * @return 结果
 	 */
 	public static String DecodeUrl(String base64UrlString, String encoding)
 	{

@@ -36,7 +36,9 @@ public class NumberHelper {
 	 * 将16进制数值转换为Byte数组
 	 * 
 	 * @param hexString
+	 * 		16进制码
 	 * @return
+	 * 		转换结果
 	 */
 	public static byte[] HexToBytes(String hexString) {
 		hexString = hexString.toUpperCase();
@@ -78,7 +80,9 @@ public class NumberHelper {
 	 * 将Byte数组转换为16进制字符串
 	 * 
 	 * @param bytes
+	 * 	待转换数据
 	 * @return String
+	 * 	结果
 	 */
 	public static String BytesToHex(byte[] bytes) {
 		StringBuffer sb = new StringBuffer(bytes.length);
@@ -111,6 +115,7 @@ public class NumberHelper {
 	/**
 	 * 检查是否超过 无符号 short 范围
 	 * @param value
+	 * 	检查值
 	 */
 	public static void CheckUInt16(int value)
 	{
@@ -123,6 +128,7 @@ public class NumberHelper {
 	/**
 	 * 检查是否超过 无符号 int 范围
 	 * @param value
+	 * 	检查值
 	 */
 	public static void CheckUInt32(long value)
 	{
@@ -135,6 +141,7 @@ public class NumberHelper {
 	/**
 	 * 检查是否超过 无符号 Byte 范围
 	 * @param value
+	 * 	检查值
 	 */
 	public static void CheckUByte(int value)
 	{

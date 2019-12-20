@@ -38,4 +38,150 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
+
+
+
+
+
+
+	<!--发布到maven仓库-->
+
+	<parent>
+		<groupId>org.sonatype.oss</groupId>
+		<artifactId>oss-parent</artifactId>
+		<version>7</version>
+	</parent>
+
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<name>Aooshi.org</name>
+			<email>maven@aooshi.org</email>
+			<organization>Aooshi.org</organization>
+			<url>https://github.com/aooshi</url>
+		</developer>
+	</developers>
+
+	<scm>
+		<url>https://github.com/aooshi/aooshi-j-util</url>
+		<connection>https://github.com/aooshi/aooshi-j-util.git</connection>
+	</scm>
+
+	<distributionManagement>
+		<snapshotRepository>
+			<id>ossrh</id>
+			<name>oss Snapshots Repository</name>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</snapshotRepository>
+		<repository>
+			<id>ossrh</id>
+			<name>oss Staging Repository</name>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+		</repository>
+	</distributionManagement>
+
+
+
+	<profiles>
+
+		<profile>
+			<id>release</id>
+			<build>
+				<plugins>
+					<!--这是自动发布的插件-->
+<!--					<plugin>-->
+<!--					<groupId>org.sonatype.plugins</groupId>-->
+<!--					<artifactId>nexus-staging-maven-plugin</artifactId>-->
+<!--					&lt;!&ndash; <version>1.6.3</version> &ndash;&gt;-->
+<!--					<extensions>true</extensions>-->
+<!--					<configuration>-->
+<!--					<serverId>ossrh</serverId>-->
+<!--					<nexusUrl>https://oss.sonatype.org/</nexusUrl>-->
+<!--					<autoReleaseAfterClose>true</autoReleaseAfterClose>-->
+<!--					</configuration>-->
+<!--					</plugin>-->
+
+<!--					<plugin>-->
+<!--						<groupId>org.apache.maven.plugins</groupId>-->
+<!--						<artifactId>maven-release-plugin</artifactId>-->
+<!--						&lt;!&ndash; <version>2.3.2</version> &ndash;&gt;-->
+<!--						<configuration>-->
+<!--							<autoVersionSubmodules>true</autoVersionSubmodules>-->
+<!--							<useReleaseProfile>false</useReleaseProfile>-->
+<!--							<releaseProfiles>release</releaseProfiles>-->
+<!--							<goals>deploy</goals>-->
+<!--						</configuration>-->
+<!--					</plugin>-->
+
+<!--					<plugin>-->
+<!--						<groupId>org.apache.maven.plugins</groupId>-->
+<!--						<artifactId>maven-compiler-plugin</artifactId>-->
+<!--						&lt;!&ndash; <version>3.0</version> &ndash;&gt;-->
+<!--						<configuration>-->
+<!--							<source>1.8</source>-->
+<!--							<target>1.8</target>-->
+<!--						</configuration>-->
+<!--					</plugin>-->
+
+
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-gpg-plugin</artifactId>
+						<!-- <version>1.5</version> -->
+						<executions>
+							<execution>
+								<id>sign-artifacts</id>
+								<phase>verify</phase>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-source-plugin</artifactId>
+						<!-- <version>3.0.1</version> -->
+						<executions>
+							<execution>
+								<id>attach-sources</id>
+								<goals>
+									<goal>jar-no-fork</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-javadoc-plugin</artifactId>
+						<!-- <version>3.0.0</version> -->
+<!--						<configuration>-->
+<!--							<failOnError>false</failOnError>-->
+<!--							<doclint>none</doclint>-->
+<!--						</configuration>-->
+						<executions>
+							<execution>
+								<id>attach-javadocs</id>
+								<phase>package</phase>
+								<goals>
+									<goal>jar</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+
+
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
+
 </project>

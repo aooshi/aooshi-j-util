@@ -63,7 +63,7 @@ public class AesHandle {
 	/**
 	 * initialize new instance
 	 * 
-	 * @param password
+	 * @param password password
 	 */
 	public AesHandle(String password) {
 		this.password = password;
@@ -72,8 +72,8 @@ public class AesHandle {
 	/**
 	 * initialize new instance
 	 * 
-	 * @param password
-	 * @param iv
+	 * @param password password
+	 * @param iv  iv
 	 */
 	public AesHandle(String password,String iv) {
 		this.password = password;
@@ -83,7 +83,7 @@ public class AesHandle {
 	/**
 	 * encrypt
 	 * 
-	 * @param content
+	 * @param content content
 	 * @return failure return null
 	 */
 	public String encryptToHex(String content) {
@@ -101,7 +101,7 @@ public class AesHandle {
 	/**
 	 * encrypt
 	 * 
-	 * @param data
+	 * @param data data
 	 * @return failure return null
 	 */
 	public String encryptToHex(byte[] data) {
@@ -116,7 +116,7 @@ public class AesHandle {
 	/**
 	 * encrypt
 	 * 
-	 * @param content
+	 * @param content content
 	 * @return failure return null
 	 */
 	public String encryptToBase64(String content) {
@@ -135,7 +135,7 @@ public class AesHandle {
 	/**
 	 * encrypt
 	 * 
-	 * @param data
+	 * @param data data
 	 * @return failure return null
 	 */
 	public String encryptToBase64(byte[] data) {
@@ -151,7 +151,7 @@ public class AesHandle {
 	/**
 	 * encrypt
 	 * 
-	 * @param data
+	 * @param content content
 	 * @return failure return null
 	 */
 	public byte[] encrypt(String content) {
@@ -167,7 +167,7 @@ public class AesHandle {
 	/**
 	 * encrypt
 	 * 
-	 * @param data
+	 * @param data data
 	 * @return failure return null
 	 */
 	public byte[] encrypt(byte[] data) {
@@ -195,7 +195,7 @@ public class AesHandle {
 	/**
 	 * decrypt
 	 * 
-	 * @param hexcontent
+	 * @param hexcontent hexcontent
 	 * @return failure return null
 	 */
 	public byte[] decryptHexToBytes(String hexcontent) {
@@ -212,7 +212,7 @@ public class AesHandle {
 	/**
 	 * decrypt
 	 * 
-	 * @param hexcontent
+	 * @param hexcontent hexcontent
 	 * @return failure return null
 	 */
 	public String decryptHexToString(String hexcontent) {
@@ -230,8 +230,8 @@ public class AesHandle {
 
 	/**
 	 * decrypt
-	 * 
-	 * @param base64
+	 *
+	 * @param base64 base64
 	 * @return failure return null
 	 */
 	public byte[] decryptBase64ToBytes(String base64) {
@@ -248,7 +248,7 @@ public class AesHandle {
 	/**
 	 * decrypt
 	 * 
-	 * @param base64
+	 * @param base64 base64
 	 * @return failure return null
 	 */
 	public String decryptBase64ToString(String base64) {
@@ -267,7 +267,7 @@ public class AesHandle {
 	/**
 	 * decrypt
 	 * 
-	 * @param data
+	 * @param data data
 	 * @return failure return null
 	 */
 	public String decryptToString(byte[] data) {
@@ -279,7 +279,7 @@ public class AesHandle {
 	/**
 	 * decrypt
 	 * 
-	 * @param data
+	 * @param data data
 	 * @return failure return null
 	 */
 	public byte[] decrypt(byte[] data) {

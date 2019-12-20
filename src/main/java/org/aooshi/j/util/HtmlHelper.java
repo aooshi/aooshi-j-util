@@ -4,6 +4,10 @@ public class HtmlHelper {
 	
     /**
      * HTML字符转义
+     * @return
+     *  结果
+     * @param input
+     *  输入值
      */
     public static String htmlEscape(String input) {
     	if (input == null || "".equals(input))
